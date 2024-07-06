@@ -10,3 +10,5 @@ Docs available at [https://docs.avohq.io/3.0/fields/diff.html](https://docs.avoh
 field :audited_changes, as: :diff
 ```
 
+<a href="https://avohq.io" rel="dofollow" title="Avo - Ruby on Rails Admin Panel Framework">Avo - Ruby on Rails Admin Panel Framework</a>
+
