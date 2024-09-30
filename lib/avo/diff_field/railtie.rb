@@ -1,8 +1,13 @@
+require_relative "fields/diff_field"
+require "diffy"
+
 module Avo
   module DiffField
     class Railtie < Rails::Railtie
       initializer "avo-diff_field.init" do
-        Avo.plugin_manager.register Avo::DiffField::Plugin
+        ActiveSupport.on_load(:avo_boot) do
+          Avo.plugin_manager.register_field :diff, Avo::DiffField::Fields::DiffField
+        end
       end
     end
   end
