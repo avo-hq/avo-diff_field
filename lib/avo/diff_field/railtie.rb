@@ -1,3 +1,6 @@
+require_relative "fields/diff_field"
+require "diffy"
+
 module Avo
   module DiffField
     class Railtie < Rails::Railtie
