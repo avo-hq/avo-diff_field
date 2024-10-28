@@ -4,7 +4,7 @@ class Avo::DiffField::Fields::DiffField::ShowComponent < Avo::Fields::ShowCompon
   def initialize **args
     super(**args)
     @diffy_value = @field.value&.map do |k, v|
-      case @field.record.action
+      case @field.record.try(:action) || @field.record.try(:event)
       when 'update'
         left_value = v[0]
         right_value = v[1]
