@@ -15,5 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://avohq.io"
   spec.license = "MIT"
 
+  # The colors come from the design system Avo 4 introduced. Avo 3 apps stay on the last version they can read.
+  spec.add_dependency "avo", ">= 4.0.0"
   spec.add_dependency "diffy"
 end
